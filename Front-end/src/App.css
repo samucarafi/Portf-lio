@@ -435,4 +435,8 @@
   .contact-info {
     grid-template-columns: 1fr;
   }
+  .command-line {
+    flex-direction: flex;
+    flex-wrap: wrap;
+  }
 }
