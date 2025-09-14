@@ -19,7 +19,7 @@ const ProfileSection = () => {
         <div className="output">
           <p>🚀 Desenvolvedor Web Full Stack</p>
           <p>📍 Niterói RJ, Brasil</p>
-          <p>💻 Transformando ideias em código há 5+ anos</p>
+          <p>💻 Transformando ideias em código</p>
         </div>
         <div className="profile-stats">
           {stats.map((stat, index) => (
