@@ -10,6 +10,7 @@ const ProfileSection = () => {
     <div className="profile-section">
       <div className="profile-image-container">
         <div className="profile-image">
+          <img width={180} src="/FotoPerfil.jpg" alt="" />
           <div className="profile-status"></div>
         </div>
       </div>
