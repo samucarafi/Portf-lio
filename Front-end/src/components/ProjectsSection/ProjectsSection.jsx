@@ -15,7 +15,7 @@ const ProjectsSection = () => {
       link: "https://samucarafi.github.io/Cafeteria/",
     },
     {
-      title: "🎵 Bolinhas",
+      title: "🔵 Bolinhas",
       description: "Exemplo de utilização de programação orientada a objetos.",
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://samucarafi.github.io/Bolinhas/",
