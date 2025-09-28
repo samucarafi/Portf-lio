@@ -20,6 +20,12 @@ const ProjectsSection = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
       link: "https://samucarafi.github.io/Bolinhas/",
     },
+    {
+      title: "❄️ Landing-Page Refrigeração",
+      description: "Criação de Landing-Page para empresa de Refrigeração",
+      technologies: ["HTML", "CSS", "JavaScript", "React"],
+      link: "https://refrigeracao.vercel.app/",
+    },
   ];
 
   return (
