@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import { Analytics } from "@vercel/analytics/react";
 import TerminalHeader from "./components/TerminalHeader/TerminalHeader";
 import ComandLine from "./components/ComandLine/ComandLine";
 import ASCIIArt from "./components/ASCIIArt/ASCIIArt";
@@ -99,6 +100,7 @@ function App() {
         {renderSection()}
         <ComandLine command={typingCommand} isTyping={true} />
       </div>
+      <Analytics />
     </div>
   );
 }
