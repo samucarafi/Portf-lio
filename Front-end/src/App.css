@@ -436,3 +436,155 @@
     flex-wrap: wrap;
   }
 }
+
+.services-section {
+  margin-top: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.service-card {
+  background: rgba(13, 17, 23, 0.8);
+  padding: 18px;
+  border-radius: 6px;
+  border: 1px solid #30363d;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-card:hover {
+  border-color: #58a6ff;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(88, 166, 255, 0.3);
+}
+
+.service-card h3 {
+  color: #58a6ff;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  color: #8b949e;
+  font-size: 14px;
+}
+
+.price {
+  display: inline-block;
+  margin-top: 10px;
+  color: #7ee787;
+  font-weight: bold;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  color: white;
+  border-radius: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+.quote-form {
+  margin-top: 20px;
+  padding: 20px;
+  background: rgba(13, 17, 23, 0.8);
+  border-radius: 8px;
+  border: 1px solid #30363d;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.quote-form h2 {
+  color: #f0883e;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-group label {
+  font-size: 13px;
+  color: #8b949e;
+}
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+  background: rgba(13, 17, 23, 0.9);
+  border: 1px solid #30363d;
+  border-radius: 6px;
+  padding: 10px;
+  color: #c9d1d9;
+  font-family: inherit;
+  font-size: 14px;
+  transition: all 0.25s ease;
+}
+.quote-form input::placeholder,
+.quote-form textarea::placeholder {
+  color: #6e7681;
+}
+.quote-form input:focus,
+.quote-form select:focus,
+.quote-form textarea:focus {
+  outline: none;
+  border-color: #58a6ff;
+  box-shadow:
+    0 0 0 1px #58a6ff,
+    0 0 8px rgba(88, 166, 255, 0.3);
+}
+.quote-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+.quote-form button {
+  background: #58a6ff;
+  color: #0d1117;
+  border: none;
+  border-radius: 6px;
+  padding: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.quote-form button:hover {
+  background: #7ee787;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(126, 231, 135, 0.3);
+}
+
+.quote-form button:active {
+  transform: scale(0.97);
+}
+.quote-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.quote-grid-full {
+  grid-column: span 2;
+}
+
+.icon-whats {
+  width: 50px;
+}

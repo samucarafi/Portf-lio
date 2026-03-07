@@ -9,9 +9,12 @@ import ExperienceSection from "./components/ExperienceSection/ExperienceSection"
 import SkillsSection from "./components/SkillsSection/SkillsSection";
 import ContactSection from "./components/ContactSection/ContactSection";
 import ProfileSection from "./components/ProfileSection/ProfileSection";
+import ServicesSection from "./components/ServicesSection/ServicesSection";
+import QuoteForm from "./components/QuoteForm/QuoteForm";
 
 function App() {
-  const [activeSection, setActiveSection] = useState("projects");
+  const [activeSection, setActiveSection] = useState("services");
+  const [selectedService, setSelectedService] = useState("");
   const useTypingAnimation = () => {
     const [currentCommand, setCurrentCommand] = useState("");
     const commands = [
@@ -64,12 +67,23 @@ function App() {
     switch (activeSection) {
       case "projects":
         return <ProjectsSection />;
+      case "services":
+        return (
+          <ServicesSection
+            onSelectService={(service) => {
+              setSelectedService(service);
+              setActiveSection("quote");
+            }}
+          />
+        );
       case "experience":
         return <ExperienceSection />;
       case "skills":
         return <SkillsSection />;
       case "contact":
         return <ContactSection />;
+      case "quote":
+        return <QuoteForm selectedService={selectedService} />;
       default:
         return <ProjectsSection />;
     }
@@ -77,9 +91,11 @@ function App() {
   const getSectionCommand = () => {
     const commands = {
       projects: "cat projects.md",
+      services: "ls services/",
       experience: "history | grep experience",
       skills: "ls -la skills/",
       contact: "curl -X GET /contact",
+      quote: "nano budget_request.txt",
     };
     return commands[activeSection];
   };
@@ -98,6 +114,13 @@ function App() {
         <ComandLine command={getSectionCommand()} />
         {renderSection()}
         <ComandLine command={typingCommand} isTyping={true} />
+        <a
+          href="https://wa.me/5521973402054"
+          target="_blank"
+          className="whatsapp-float"
+        >
+          <img className="icon-whats" src="whatsapp.png" alt="whatsapp" />
+        </a>
       </div>
     </div>
   );
