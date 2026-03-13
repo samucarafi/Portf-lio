@@ -3,6 +3,19 @@ import ProjectCard from "../ProjectCard/ProjectCard";
 const ProjectsSection = () => {
   const projects = [
     {
+      title: "🛍️ Royal Parfums",
+      description:
+        "E-commerce completo de perfumes com catálogo de produtos, sistema de pedidos, cálculo de frete e pagamento integrado ao Mercado Pago. Possui painel administrativo para gerenciamento de produtos, usuários e pedidos.",
+      technologies: [
+        "React",
+        "Node.js",
+        "MongoDB",
+        "Express",
+        "Mercado Pago API",
+      ],
+      link: "https://www.royalparfums.com.br",
+    },
+    {
       title: "🎮 Secret Words",
       description: "Jogo Secret Word desenvolvido com React",
       technologies: ["React", "CSS", "JavaScript"],
