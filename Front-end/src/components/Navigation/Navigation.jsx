@@ -1,8 +1,8 @@
 const Navigation = ({ activeSection, onSectionChange }) => {
   const sections = [
     { id: "services", label: "./services.sh" },
-    { id: "quote", label: "./get_quote.sh" },
     { id: "projects", label: "./projects.sh" },
+    { id: "quote", label: "./get_quote.sh" },
     //{ id: "experience", label: "./experience.sh" },
     { id: "skills", label: "./skills.sh" },
     { id: "contact", label: "./contact.sh" },
