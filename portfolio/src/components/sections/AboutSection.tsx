@@ -25,9 +25,7 @@ export function AboutSection() {
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           {/* Intro */}
           <div>
-            <span className="font-mono text-sm text-green-400">
-              {/* sobre mim */}
-            </span>
+            <span className="font-mono text-sm text-green-400">Sobre mim</span>
 
             <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
               Tecnologia com propósito.
