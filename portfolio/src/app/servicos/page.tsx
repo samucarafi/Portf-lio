@@ -62,7 +62,7 @@ const services = [
 export default function ServicesPage() {
   return (
     <main className="min-h-screen">
-      <div className="mx-auto max-w-6xl px-6 pb-24 pt-28 md:pb-32 md:pt-36">
+      <div className="mx-auto max-w-6xl px-5 pb-16 pt-28 sm:px-6 sm:pb-20 md:pt-32">
         {/* Back */}
         <Link
           href="/"
@@ -73,14 +73,14 @@ export default function ServicesPage() {
         </Link>
 
         {/* Header */}
-        <header className="mt-12 max-w-3xl md:mt-16">
+        <header className="mt-10 max-w-3xl md:mt-14">
           <span className="font-mono text-sm text-green-400">Serviços</span>
 
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Soluções para colocar sua ideia em prática.
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400 md:text-lg">
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
             Desenvolvo soluções digitais pensando no que realmente importa:
             apresentar seu negócio, facilitar seus processos e criar uma
             experiência melhor para seus clientes.
@@ -88,14 +88,14 @@ export default function ServicesPage() {
         </header>
 
         {/* Services */}
-        <div className="mt-14 grid gap-4 md:mt-16 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
               <article
                 key={service.title}
-                className="rounded-2xl border border-white/10 bg-[#0b0d0e] p-6 transition-colors hover:border-white/15 sm:p-8"
+                className="rounded-2xl border border-white/10 bg-[#0b0d0e] p-5 transition-colors hover:border-white/15 sm:p-6"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-green-400">
                   <Icon size={20} strokeWidth={1.7} />

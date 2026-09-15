@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
   ArrowUpRight,
   LayoutTemplate,
@@ -8,100 +9,83 @@ import {
 
 const services = [
   {
-    number: "01",
     icon: LayoutTemplate,
     title: "Sites profissionais",
     description:
-      "Uma presença digital moderna para apresentar sua empresa, seus serviços e transmitir confiança aos seus clientes.",
+      "Presença digital moderna para apresentar sua empresa e seus serviços.",
   },
   {
-    number: "02",
     icon: ShoppingBag,
     title: "Lojas virtuais",
     description:
-      "Uma loja completa para apresentar seus produtos, receber pedidos e transformar sua presença online em vendas.",
+      "Estruturas completas para apresentar produtos e vender pela internet.",
   },
   {
-    number: "03",
     icon: Settings2,
     title: "Sistemas personalizados",
     description:
-      "Soluções desenvolvidas de acordo com a rotina do seu negócio para facilitar processos e economizar tempo.",
+      "Soluções sob medida para organizar processos e facilitar tarefas.",
   },
   {
-    number: "04",
     icon: Megaphone,
     title: "Landing Pages",
     description:
-      "Páginas estratégicas para divulgar produtos, serviços ou campanhas e transformar visitantes em clientes.",
+      "Páginas objetivas para divulgar produtos, serviços ou campanhas.",
   },
 ];
 
 export function ServicesSection() {
   return (
-    <section
-      id="services"
-      className="relative border-t border-white/10 py-16 sm:py-20 md:py-24"
-    >
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Header */}
-        <div className="mb-9 max-w-2xl sm:mb-12 md:mb-14">
-          <span className="font-mono text-sm text-green-400">Serviços</span>
+    <section className="border-t border-white/10 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <p className="text-sm font-medium text-green-400">Serviços</p>
 
-          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-5xl">
-            Soluções digitais para o seu negócio.
-          </h2>
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              O que posso fazer por você.
+            </h2>
+          </div>
 
-          <p className="mt-4 text-sm leading-6 text-zinc-400 sm:text-base md:text-lg md:leading-7">
-            Cada projeto é pensado para resolver uma necessidade real, com um
-            visual profissional e uma experiência simples para seus clientes.
-          </p>
+          <Link
+            href="/servicos"
+            className="group inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-green-400"
+          >
+            Ver todos
+            <ArrowUpRight
+              size={15}
+              className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+            />
+          </Link>
         </div>
 
-        {/* Services */}
-        <div className="grid overflow-hidden rounded-2xl border border-white/10 bg-white/10 md:grid-cols-2">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {services.map((service) => {
             const Icon = service.icon;
 
             return (
-              <article
-                key={service.number}
-                className="group relative min-h-[245px] bg-[#0b0d0e] p-6 transition-colors duration-300 hover:bg-[#101413] sm:p-7 md:min-h-[310px] md:p-9"
+              <Link
+                key={service.title}
+                href="/servicos"
+                className="group rounded-xl border border-white/10 bg-[#0b0d0e] p-5 transition-colors hover:border-white/15 hover:bg-white/[0.03]"
               >
-                {/* Number */}
-                <span className="absolute right-7 top-7 font-mono text-xs text-zinc-700 md:right-10 md:top-10">
-                  {service.number}
-                </span>
-
-                {/* Icon */}
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-white/[0.03] text-zinc-300 transition-all duration-300 group-hover:border-green-400/30 group-hover:bg-green-400/5 group-hover:text-green-400">
-                  <Icon size={21} strokeWidth={1.7} />
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-green-400">
+                  <Icon size={19} strokeWidth={1.7} />
                 </div>
 
-                {/* Content */}
-                <div className="mt-7 max-w-md sm:mt-8">
-                  <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
-                    {service.title}
-                  </h3>
+                <h3 className="mt-5 text-base font-semibold text-white">
+                  {service.title}
+                </h3>
 
-                  <p className="mt-4 text-sm leading-6 text-zinc-400 md:text-base md:leading-7">
-                    {service.description}
-                  </p>
+                <p className="mt-2 text-xs leading-5 text-zinc-500">
+                  {service.description}
+                </p>
+
+                <div className="mt-5 flex items-center gap-1.5 text-xs text-zinc-600 transition-colors group-hover:text-green-400">
+                  Saiba mais
+                  <ArrowUpRight size={13} />
                 </div>
-
-                {/* Link */}
-                <div className="absolute bottom-7 left-7 flex items-center gap-2 text-sm text-zinc-500 transition-colors duration-300 group-hover:text-green-400 md:bottom-10 md:left-10">
-                  <span>Saiba mais</span>
-
-                  <ArrowUpRight
-                    size={15}
-                    className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
-                  />
-                </div>
-
-                {/* Hover accent */}
-                <div className="absolute bottom-0 left-0 h-px w-0 bg-green-400 transition-all duration-500 group-hover:w-full" />
-              </article>
+              </Link>
             );
           })}
         </div>

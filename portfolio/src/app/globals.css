@@ -5,7 +5,7 @@
   --foreground: #f4f4f5;
   --muted: #a1a1aa;
   --border: rgba(255, 255, 255, 0.08);
-  --card: rgba(255, 255, 255, 0.03);
+  --card: #0b0d0e;
   --accent: #22c55e;
 }
 
@@ -19,18 +19,21 @@ html {
 
 body {
   margin: 0;
+  min-width: 320px;
   background:
     radial-gradient(
-      circle at 50% -20%,
-      rgba(34, 197, 94, 0.08),
-      transparent 35%
+      circle at 50% -15%,
+      rgba(34, 197, 94, 0.07),
+      transparent 32%
     ),
     var(--background);
   color: var(--foreground);
   font-family: var(--font-display), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-body::selection {
+::selection {
   background: rgba(34, 197, 94, 0.3);
   color: white;
 }
@@ -45,17 +48,16 @@ a {
   text-decoration: none;
 }
 
-::selection {
-  background: rgba(34, 197, 94, 0.3);
-  color: white;
+button {
+  font: inherit;
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #08090a;
+  background: var(--background);
 }
 
 ::-webkit-scrollbar-thumb {

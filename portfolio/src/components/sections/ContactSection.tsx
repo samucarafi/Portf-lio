@@ -5,20 +5,21 @@ const WHATSAPP_URL =
 
 export function ContactSection() {
   return (
-    <section id="contact" className="border-t border-white/10 py-24 md:py-32">
+    <section
+      id="contact"
+      className="border-t border-white/10 py-16 sm:py-20 md:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6">
-        <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#0b0d0e] p-8 md:p-12 lg:p-16">
+        <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0b0d0e] p-6 sm:p-8 md:p-10">
           {/* Glow */}
           <div className="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-green-500/10 blur-[120px]" />
 
           <div className="relative grid gap-12 lg:grid-cols-[1fr_auto] lg:items-end">
             {/* Content */}
             <div className="max-w-2xl">
-              <span className="font-mono text-sm text-green-400">
-                {/* contato */}
-              </span>
+              <span className="font-mono text-sm text-green-400">Contato</span>
 
-              <h2 className="mt-5 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+              <h2 className="mt-5 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-5xl">
                 Vamos conversar sobre seu projeto?
               </h2>
 

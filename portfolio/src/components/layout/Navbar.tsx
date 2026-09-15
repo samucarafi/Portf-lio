@@ -101,14 +101,14 @@ export function Navbar() {
                 GitHub
               </a>
 
-              <Link
-                href="/contato"
-                onClick={() => setIsOpen(false)}
-                className="flex h-10 flex-1 items-center justify-center gap-2 rounded-lg bg-white/[0.03] text-xs text-zinc-400"
+              <a
+                href="https://www.linkedin.com/in/samuelrafino/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
-                <FaLinkedinIn size={14} />
-                LinkedIn
-              </Link>
+                <FaLinkedinIn size={15} />
+              </a>
             </div>
           </div>
         )}

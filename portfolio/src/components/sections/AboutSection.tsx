@@ -17,7 +17,10 @@ const highlights = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="border-t border-white/10 py-24 md:py-32">
+    <section
+      id="about"
+      className="border-t border-white/10 py-16 sm:py-20 md:py-24"
+    >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
           {/* Intro */}
@@ -26,7 +29,7 @@ export function AboutSection() {
               {/* sobre mim */}
             </span>
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
               Tecnologia com propósito.
             </h2>
           </div>

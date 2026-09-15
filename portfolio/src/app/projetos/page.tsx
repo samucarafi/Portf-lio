@@ -7,7 +7,7 @@ import { ProjectCard } from "@/components/projects/ProjectCard";
 export default function ProjectsPage() {
   return (
     <main className="min-h-screen">
-      <div className="mx-auto max-w-6xl px-6 pb-24 pt-28 md:pb-32 md:pt-36">
+      <div className="mx-auto max-w-6xl px-5 pb-16 pt-28 sm:px-6 sm:pb-20 md:pt-32">
         <Link
           href="/"
           className="inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-white"
@@ -16,20 +16,20 @@ export default function ProjectsPage() {
           Voltar para início
         </Link>
 
-        <header className="mt-12 max-w-3xl md:mt-16">
+        <header className="mt-10 max-w-3xl md:mt-14">
           <p className="text-sm font-medium text-green-400">Projetos</p>
 
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl">
+          <h1 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
             Trabalhos que saíram do papel.
           </h1>
 
-          <p className="mt-5 max-w-2xl text-base leading-7 text-zinc-400 md:text-lg">
+          <p className="mt-4 max-w-2xl text-sm leading-6 text-zinc-400 sm:text-base sm:leading-7">
             Alguns dos projetos que desenvolvi para transformar ideias e
             necessidades em experiências digitais.
           </p>
         </header>
 
-        <div className="mt-12 grid gap-5 md:mt-14 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:mt-12 md:grid-cols-2">
           {projects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}

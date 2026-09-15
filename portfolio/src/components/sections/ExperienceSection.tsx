@@ -1,4 +1,5 @@
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 const experiences = [
   {
@@ -21,7 +22,7 @@ export function ExperienceSection() {
   return (
     <section
       id="experience"
-      className="border-t border-white/10 py-24 md:py-32"
+      className="border-t border-white/10 py-16 sm:py-20 md:py-24"
     >
       <div className="mx-auto max-w-6xl px-6">
         <div className="grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
@@ -31,7 +32,7 @@ export function ExperienceSection() {
               {/* experiência */}
             </span>
 
-            <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-4xl">
               Construindo na prática.
             </h2>
 
@@ -74,8 +75,8 @@ export function ExperienceSection() {
                     {experience.description}
                   </p>
 
-                  <a
-                    href="#projects"
+                  <Link
+                    href="/projects"
                     className="group mt-5 inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-green-400"
                   >
                     Ver projetos relacionados
@@ -83,7 +84,7 @@ export function ExperienceSection() {
                       size={15}
                       className="transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
                     />
-                  </a>
+                  </Link>
                 </article>
               ))}
             </div>

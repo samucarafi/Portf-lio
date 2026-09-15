@@ -10,28 +10,24 @@ export function ProjectsSection() {
     .slice(0, 3);
 
   return (
-    <section id="projects" className="border-t border-white/10 py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-6">
-        {/* Header */}
-        <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
-          <div className="max-w-2xl">
+    <section className="border-t border-white/10 py-16 sm:py-20">
+      <div className="mx-auto max-w-6xl px-5 sm:px-6">
+        <div className="flex items-end justify-between gap-4">
+          <div>
             <p className="text-sm font-medium text-green-400">Projetos</p>
 
-            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+            <h2 className="mt-2 text-2xl font-semibold tracking-tight text-white sm:text-3xl">
               Alguns trabalhos.
             </h2>
-
-            <p className="mt-3 text-sm leading-6 text-zinc-500 md:text-base">
-              Projetos desenvolvidos para transformar ideias em experiências
-              digitais.
-            </p>
           </div>
 
           <Link
             href="/projetos"
-            className="group inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-green-400"
+            className="group inline-flex items-center gap-2 text-sm text-zinc-500 transition-colors hover:text-green-400"
           >
-            Ver todos
+            <span className="hidden sm:inline">Ver todos</span>
+            <span className="sm:hidden">Todos</span>
+
             <ArrowUpRight
               size={15}
               className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
@@ -39,8 +35,7 @@ export function ProjectsSection() {
           </Link>
         </div>
 
-        {/* Projects */}
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
+        <div className="mt-8 grid gap-4 md:grid-cols-2">
           {featuredProjects.map((project) => (
             <ProjectCard key={project.slug} project={project} />
           ))}
