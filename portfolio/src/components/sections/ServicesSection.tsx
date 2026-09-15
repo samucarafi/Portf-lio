@@ -41,18 +41,18 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative border-t border-white/10 py-24 md:py-32"
+      className="relative border-t border-white/10 py-16 sm:py-20 md:py-24"
     >
       <div className="mx-auto max-w-6xl px-6">
         {/* Header */}
-        <div className="mb-12 max-w-2xl md:mb-16">
-          <span className="font-mono text-sm text-green-400">// serviços</span>
+        <div className="mb-9 max-w-2xl sm:mb-12 md:mb-14">
+          <span className="font-mono text-sm text-green-400">Serviços</span>
 
-          <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+          <h2 className="mt-3 text-2xl font-semibold tracking-tight text-white sm:text-3xl md:text-5xl">
             Soluções digitais para o seu negócio.
           </h2>
 
-          <p className="mt-5 text-base leading-7 text-zinc-400 md:text-lg md:leading-8">
+          <p className="mt-4 text-sm leading-6 text-zinc-400 sm:text-base md:text-lg md:leading-7">
             Cada projeto é pensado para resolver uma necessidade real, com um
             visual profissional e uma experiência simples para seus clientes.
           </p>
@@ -66,7 +66,7 @@ export function ServicesSection() {
             return (
               <article
                 key={service.number}
-                className="group relative min-h-[280px] bg-[#0b0d0e] p-7 transition-colors duration-300 hover:bg-[#101413] sm:p-8 md:min-h-[310px] md:p-10"
+                className="group relative min-h-[245px] bg-[#0b0d0e] p-6 transition-colors duration-300 hover:bg-[#101413] sm:p-7 md:min-h-[310px] md:p-9"
               >
                 {/* Number */}
                 <span className="absolute right-7 top-7 font-mono text-xs text-zinc-700 md:right-10 md:top-10">
@@ -79,7 +79,7 @@ export function ServicesSection() {
                 </div>
 
                 {/* Content */}
-                <div className="mt-10 max-w-md">
+                <div className="mt-7 max-w-md sm:mt-8">
                   <h3 className="text-xl font-semibold tracking-tight text-white md:text-2xl">
                     {service.title}
                   </h3>

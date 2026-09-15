@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-screen items-center overflow-hidden pt-28"
+      className="relative flex min-h-[680px] items-center overflow-hidden pt-24 sm:min-h-[720px] md:min-h-screen md:pt-28"
     >
       {/* Background */}
       <div className="pointer-events-none absolute inset-0">
@@ -24,9 +24,9 @@ export function Hero() {
         <div className="absolute bottom-0 right-0 h-80 w-80 rounded-full bg-green-500/5 blur-[120px]" />
       </div>
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 pb-24 md:pb-32">
+      <div className="relative mx-auto w-full max-w-6xl px-5 pb-12 sm:px-6 sm:pb-16 md:pb-32">
         {/* Status */}
-        <div className="mb-10 flex items-center gap-3">
+        <div className="mb-7 flex items-center gap-3 sm:mb-9">
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-50" />
             <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-green-500" />
@@ -43,24 +43,24 @@ export function Hero() {
         </div>
 
         {/* Heading */}
-        <h1 className="max-w-5xl text-5xl font-semibold leading-[0.95] tracking-[-0.04em] text-white sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="max-w-5xl text-[2.7rem] font-semibold leading-[0.98] tracking-[-0.04em] text-white sm:text-5xl md:text-7xl lg:text-8xl">
           Soluções digitais
           <br />
           <span className="text-zinc-500">para o seu negócio.</span>
         </h1>
 
         {/* Description */}
-        <p className="mt-8 max-w-2xl text-base leading-7 text-zinc-400 sm:text-lg md:text-xl md:leading-8">
+        <p className="mt-6 max-w-2xl text-sm leading-6 text-zinc-400 sm:mt-7 sm:text-base sm:leading-7 md:text-xl md:leading-8">
           Desenvolvo sites, lojas virtuais e sistemas personalizados para
           empresas que querem ter uma presença digital profissional e oferecer
           uma experiência melhor para seus clientes.
         </p>
 
         {/* Actions */}
-        <div className="mt-10 flex flex-col gap-3 sm:flex-row">
+        <div className="mt-7 flex flex-col gap-2.5 sm:mt-9 sm:flex-row">
           <a
             href="#projects"
-            className="group inline-flex h-14 items-center justify-center gap-3 rounded-xl bg-green-500 px-6 font-semibold text-black transition-all duration-300 hover:bg-green-400 hover:shadow-[0_0_35px_rgba(34,197,94,0.18)]"
+            className="group inline-flex h-12 items-center justify-center gap-3 rounded-xl bg-green-500 px-6 font-semibold text-black transition-all duration-300 hover:bg-green-400 hover:shadow-[0_0_35px_rgba(34,197,94,0.18)]"
           >
             Ver projetos
             <ArrowUpRight
@@ -78,7 +78,7 @@ export function Hero() {
         </div>
 
         {/* Bottom hint */}
-        <div className="mt-20 flex items-center gap-3 text-zinc-600">
+        <div className="mt-12 flex items-center gap-3 text-zinc-600 sm:mt-16">
           <ArrowDown size={15} />
 
           <span className="font-mono text-xs">explore</span>

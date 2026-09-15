@@ -91,6 +91,7 @@ export const projects: Project[] = [
       { name: "CSS", icon: "css" },
       { name: "JavaScript", icon: "javascript" },
     ],
+
     features: [
       "Design responsivo",
       "Apresentação de produtos",
@@ -99,6 +100,7 @@ export const projects: Project[] = [
     ],
     image: "/projects/cafeteria.webp",
     demo: "https://samucarafi.github.io/Cafeteria/",
+    featured: true, //apenas para destacar o projeto na página de projetos
     status: "completed",
   },
 
