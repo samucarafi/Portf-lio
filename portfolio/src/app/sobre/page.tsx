@@ -18,7 +18,7 @@ export default function AboutPage() {
       </div>
 
       <AboutSection />
-      <ExperienceSection />
+      {/* <ExperienceSection />  colocar experiencias depois*/}
     </main>
   );
 }
